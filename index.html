@@ -1,0 +1,175 @@
+<!DOCTYPe html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <title>Coffee landing page</title>
+
+        <!--Swiper CSS-->
+        <link rel="stylesheet" href="swiper-bundle.min.css">
+    </head>
+    
+
+    <body>
+        <header class="header">
+            <nav class="navbar">
+                <a href="#home" class="homee active" onclick="activeStr(1)">Home</a>
+                <a href="#about" class="abouut" onclick="activeStr(2)">About us</a>
+                <a href="#products" class="productss" onclick="activeStr(3)">Products</a>
+            </nav>
+        </header>
+        <!-- Home Page -->
+        <!--يجب تغيير صورة الخلفية-->
+        <section class="home" id="home">
+        <div class="home-content">
+            <h1>Try our coffee</h1>
+            <p >Our coffee stands out with a distinctive flavor that sets it apart from the rest, and its essence tells a story of its unique origin</p>
+            <button class="btn">Learn more</button>
+        </div>
+        </section>
+        <!-- Home Page End -->
+
+        <!-- About Page -->
+        <section class="about" id="about">
+            <h1>About us</h1>
+            <p class="para1">A coffee cafe is a haven for coffee enthusiasts and socializing alike. With its inviting aroma of freshly brewed coffee wafting through the air, it creates a cozy and comforting atmosphere for patrons. Coffee cafes offer a diverse range of coffee options, from the classic espresso to trendy specialty drinks, satisfying the varied preferences of their customers.</p>
+            <p class="para2">In addition to serving coffee, these cafes often provide a welcoming ambiance, conducive to work or casual meetings. Complemented by comfortable seating, soft background music, and an array of delectable pastries or snacks, coffee cafes have become more than just a place to grab a cup of coffee; they are social hubs where people gather to relax, work, or catch up with friends, fostering a sense of community around the shared love of this beloved beverage.</p>
+        </section>
+        <!-- About Page End -->
+
+        <!-- Works Page-->
+        <section class="products" id="products">
+            <h1 class="podTitle">Products</h1>
+            <h2>Drinks</h2>
+            <!--Here drinks slider-->
+            <div class="slider-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <!--Card 1-->
+                        <div class="card swiper-slide">
+                            <div class="card-linear">
+                                <h1>coffee name</h1>
+                            </div>
+                            <img src="img/coffee-cup (11).png" alt="">
+                         </div>
+                        <!--Card 2-->
+                        <div class="card swiper-slide">
+                               <div class="card-linear">
+                                   <h1>coffee name</h1>
+                               </div>
+                               <img src="img/coffee-cup (1).png" alt="">
+                            </div>
+                           <!--Card 3-->
+                        <div class="card swiper-slide">
+                               <div class="card-linear">
+                                   <h1>coffee name</h1>
+                               </div>
+                               <img src="img/cream-coffee (1).png" alt="">
+                            </div>
+                           <!--Card 4-->
+                        <div class="card swiper-slide">
+                               <div class="card-linear">
+                                   <h1>coffee name</h1>
+                               </div>
+                               <img src="img/cream-coffee (2).png" alt="">
+                            </div>
+                           <!--Card 5-->
+                        <div class="card swiper-slide">
+                               <div class="card-linear">
+                                   <h1>coffee name</h1>
+                               </div>
+                               <img src="img/coffee-cup (4).png" alt="">
+                            </div>
+                           <!--end-->
+
+                    </div>
+                    <div class="swiper-button-next swiper-navBtn"></div>
+                    <div class="swiper-button-prev swiper-navBtn"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <!--Here Snacks splide-->
+            <h2>Snacks</h2>
+            <div class="slider-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <!--Card 1-->
+                        <div class="card swiper-slide">
+                            <div class="card-linear">
+                                <h1>snack name</h1>
+                            </div>
+                            <img src="img/cookies (1).png" alt="">
+                         </div>
+                        <!--Card 2-->
+                        <div class="card swiper-slide">
+                               <div class="card-linear">
+                                   <h1>snack name</h1>
+                               </div>
+                               <img src="img/cookies.png" alt="">
+                            </div>
+                           <!--Card 3-->
+                        <div class="card swiper-slide">
+                               <div class="card-linear">
+                                   <h1>snack name</h1>
+                               </div>
+                               <img src="img/cookies (2).png" alt="">
+                            </div>
+                           <!--Card 4-->
+                        <div class="card swiper-slide">
+                               <div class="card-linear">
+                                   <h1>snack name</h1>
+                               </div>
+                               <img src="img/ice-cream.png" alt="">
+                            </div>
+                           <!--Card 5-->
+                        <div class="card swiper-slide">
+                               <div class="card-linear">
+                                   <h1>snack name</h1>
+                               </div>
+                               <img src="img/two piscuts.png" alt="">
+                            </div>
+                           <!--end-->
+
+                    </div>
+                    <div class="swiper-button-next swiper-navBtn"></div>
+                    <div class="swiper-button-prev swiper-navBtn"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Works Page End -->
+
+        <!--JavaScript and jQurey-->
+        <script>
+        function activeStr (strNum){
+            if (strNum == "1"){
+                $(document).ready(function(){
+                $(".homee").addClass("active");
+                $(".abouut").removeClass("active");
+                $(".productss").removeClass("active");
+            });
+            }
+            if (strNum == 2){
+                $(document).ready(function(){
+                $(".homee").removeClass("active");
+                $(".abouut").addClass("active");
+                $(".productss").removeClass("active");
+            });
+            }
+            if (strNum == 3){
+                $(document).ready(function(){
+                $(".homee").removeClass("active");
+                $(".abouut").removeClass("active");
+                $(".productss").addClass("active");
+            });}
+    }
+        </script>
+    </body>
+
+    <!--Swiper JS-->
+    <script src="swiper-bundle.min.js"></script>
+
+    <!--JavaScript-->
+    <script src="script.js"></script>
+</html>
