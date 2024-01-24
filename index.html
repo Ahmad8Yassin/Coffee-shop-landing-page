@@ -17,6 +17,7 @@
                 <a href="#home" class="homee active" onclick="activeStr(1)">Home</a>
                 <a href="#about" class="abouut" onclick="activeStr(2)">About us</a>
                 <a href="#products" class="productss" onclick="activeStr(3)">Products</a>
+                <a href="#address" class="adddress" onclick="activeStr(4)">Address</a>
             </nav>
         </header>
         <!-- Home Page -->
@@ -25,7 +26,7 @@
         <div class="home-content">
             <h1>Try our coffee</h1>
             <p >Our coffee stands out with a distinctive flavor that sets it apart from the rest, and its essence tells a story of its unique origin</p>
-            <a class="btn" href="#about">Learn more</a>
+            <button class="btn" href="#about">Learn more</button>
         </div>
         </section>
         <!-- Home Page End -->
@@ -139,7 +140,45 @@
             </div>
         </section>
         <!-- Works Page End -->
-
+        <section class="address" id="address">
+            <div class="texts-div">
+            <div class="address-div">
+             <h1>Address</h1>
+             <span class="address-txt"><img src="img/map-mark-icon.svg" alt="" class="location">unknown street, unknown district</span>
+             <span class="address-txt"><img src="img/email-icon.svg" alt="" class="email">coffeeshop@fakemail.com</span>
+             <span class="address-txt"><img src="img/phone-icon.svg" alt="" class="number">999 9999 9999</span>
+            </div>
+            <div class="working-time-div">
+             <h1>Working Hours</h1>
+             <p>7:00 am to 7:00 pm in weekdays</p>
+             <p>6:30 am to 9:30 pm in weekends</p>
+            </div>
+             <h1>Follow us</h1>
+            <div class="follow-div">
+             <div class="social-circle"><img src="img/snap-icon.svg" alt=""></div>
+             <div class="social-circle"><img src="img/instagram-icon.svg" alt=""></div>
+            </div>
+            </div>
+            <div class="input-div">
+            <div class="input-group">
+                <input type="text" class="name-input"  name="full-name" required>
+                <span>Full name</span>
+            </div>
+            <div class="input-group">
+                <input type="email" class="name-input" required>
+                <span>Email</span>
+            </div>
+            <div class="input-group">
+                <input type="text" class="name-input" required>
+                <span>Subject</span>
+            </div>
+            <div class="input-group">
+                <input type="text" class="message-input" required>
+                <span>Message</span>
+            </div>
+            <button href="#" class="submit-btn">Submit</button>
+        </div>
+        </section>
         <!--JavaScript and jQurey-->
         <script>
         function activeStr (strNum){
@@ -148,6 +187,7 @@
                 $(".homee").addClass("active");
                 $(".abouut").removeClass("active");
                 $(".productss").removeClass("active");
+                $(".adddress").removeClass("active");
             });
             }
             if (strNum == 2){
@@ -155,6 +195,7 @@
                 $(".homee").removeClass("active");
                 $(".abouut").addClass("active");
                 $(".productss").removeClass("active");
+                $(".adddress").removeClass("active");
             });
             }
             if (strNum == 3){
@@ -162,7 +203,16 @@
                 $(".homee").removeClass("active");
                 $(".abouut").removeClass("active");
                 $(".productss").addClass("active");
+                $(".adddress").removeClass("active");
             });}
+            if (strNum == 4){
+                $(document).ready(function(){
+                $(".homee").removeClass("active");
+                $(".abouut").removeClass("active");
+                $(".productss").removeClass("active");
+                $(".adddress").addClass("active");
+            });}
+
     }
         </script>
     </body>
